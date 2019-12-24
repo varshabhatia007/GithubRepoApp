@@ -34,7 +34,11 @@ dependencies {
     implementation deps.support.core_ktx
     implementation deps.constraint_layout
 
-
+    //dagger
+    implementation deps.dagger.android
+    implementation deps.dagger.android_support
+    kapt deps.dagger.android_support_compiler
+    kapt deps.dagger.compiler
 
     //testing
     testImplementation deps.junit
