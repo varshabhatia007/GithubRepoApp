@@ -27,6 +27,8 @@ versions.mockito_all = "1.10.19"
 versions.mockito_android = "2.25.0"
 versions.mockwebserver = "3.8.1"
 
+versions.lifecycleVersion = '2.2.0-alpha02'
+
 ext.versions = versions
 
 def support = [:]
@@ -111,6 +113,11 @@ network.mock = "com.squareup.retrofit2:retrofit-mock:${versions.retrofit}"
 network.okhttp_logging_interceptor = "com.squareup.okhttp3:logging-interceptor:${versions.okhttp_logging_interceptor}"
 deps.network = network
 
+def lifecycle = [:]
+lifecycle.ext = "androidx.lifecycle:lifecycle-extensions:${versions.lifecycleVersion}"
+lifecycle.livedata = "androidx.lifecycle:lifecycle-livedata-ktx:${versions.lifecycleVersion}"
+lifecycle.viewmodel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${versions.lifecycleVersion}"
+deps.lifecycle = lifecycle
 
 ext.deps = deps
 

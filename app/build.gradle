@@ -49,6 +49,11 @@ dependencies {
     implementation deps.network.gson
     implementation deps.network.okhttp_logging_interceptor
 
+    //lifecycle ext
+    implementation deps.lifecycle.ext
+    implementation deps.lifecycle.livedata
+    implementation deps.lifecycle.viewmodel
+
     // Android Testing Support Library's runner and rules
     testImplementation deps.arch_core.testing
     testImplementation deps.junit

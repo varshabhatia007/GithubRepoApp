@@ -1,6 +1,7 @@
 package com.example.repo.di.module
 
 import com.example.repo.githubapi.GithubApi
+import com.example.repo.repo.GitHubRepoDataSource
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineScope
@@ -10,7 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module(includes = [NetworkModule::class])
+@Module(includes = [NetworkModule::class ,VMModule::class])
 class AppModule {
     @Singleton
     @Provides
@@ -36,4 +37,9 @@ class AppModule {
                                    converterFactory: GsonConverterFactory, clazz: Class<T>): T {
         return createRetrofit(okhttpClient, converterFactory).create(clazz)
     }
+
+    @Singleton
+    @Provides
+    fun providesGithubRepoDataSource(githubApi: GithubApi)  = GitHubRepoDataSource(githubApi)
+
 }
