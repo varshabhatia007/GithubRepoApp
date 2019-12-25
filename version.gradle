@@ -21,6 +21,12 @@ versions.junit = "4.12"
 versions.kotlin = "1.3.50"
 versions.support = "1.0.0"
 versions.dagger = "2.16"
+
+versions.mockito = "2.25.0"
+versions.mockito_all = "1.10.19"
+versions.mockito_android = "2.25.0"
+versions.mockwebserver = "3.8.1"
+
 ext.versions = versions
 
 def support = [:]
@@ -55,11 +61,20 @@ deps.test = test
 
 def espresso = [:]
 espresso.core = "androidx.test.espresso:espresso-core:$versions.espresso"
+espresso.contrib = "androidx.test.espresso:espresso-contrib:$versions.espresso"
+espresso.intents = "androidx.test.espresso:espresso-intents:$versions.espresso"
 deps.espresso = espresso
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 deps.constraint_layout = "androidx.constraintlayout:constraintlayout:$versions.constraint_layout"
+deps.mock_web_server = "com.squareup.okhttp3:mockwebserver:$versions.mockwebserver"
 deps.junit = "junit:junit:$versions.junit"
+
+def mockito = [:]
+mockito.core = "org.mockito:mockito-core:$versions.mockito"
+mockito.all = "org.mockito:mockito-all:$versions.mockito_all"
+mockito.android = "org.mockito:mockito-android:$versions.mockito_android"
+deps.mockito = mockito
 
 def dagger = [:]
 dagger.android = "com.google.dagger:dagger-android:$versions.dagger"
@@ -69,7 +84,7 @@ dagger.android_support_compiler = "com.google.dagger:dagger-android-processor:$v
 deps.dagger = dagger
 
 versions.okhttp_logging_interceptor = "3.9.0"
-versions.retrofit = "2.3.0"
+versions.retrofit = "2.6.0"
 versions.coroutinesVersion = "1.3.0-RC"
 
 def build_versions = [:]
@@ -82,6 +97,11 @@ def coroutines = [:]
 coroutines.android = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutinesVersion}"
 coroutines.core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutinesVersion}"
 deps.coroutines = coroutines
+
+def arch_core = [:]
+arch_core.runtime = "androidx.arch.core:core-runtime:$versions.arch_core"
+arch_core.testing = "androidx.arch.core:core-testing:$versions.arch_core"
+deps.arch_core = arch_core
 
 
 def network = [:]

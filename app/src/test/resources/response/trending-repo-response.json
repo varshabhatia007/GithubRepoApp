@@ -1,0 +1,302 @@
+[
+  {
+    "username": "frenck",
+    "name": "Franck Nijhof",
+    "type": "user",
+    "url": "https://github.com/frenck",
+    "avatar": "https://avatars2.githubusercontent.com/u/195327",
+    "repo": {
+      "name": "awesome-home-assistant",
+      "description": "A curated list of amazingly awesome Home Assistant resources.",
+      "url": "https://github.com/frenck/awesome-home-assistant"
+    }
+  },
+  {
+    "username": "seanmonstar",
+    "name": "Sean McArthur",
+    "type": "user",
+    "url": "https://github.com/seanmonstar",
+    "avatar": "https://avatars1.githubusercontent.com/u/51479",
+    "repo": {
+      "name": "reqwest",
+      "description": "An easy and powerful Rust HTTP Client",
+      "url": "https://github.com/seanmonstar/reqwest"
+    }
+  },
+  {
+    "username": "andygrove",
+    "name": "Andy Grove",
+    "type": "user",
+    "url": "https://github.com/andygrove",
+    "avatar": "https://avatars0.githubusercontent.com/u/934084",
+    "repo": {
+      "name": "datafusion",
+      "description": "DataFusion has now been donated to the Apache Arrow project",
+      "url": "https://github.com/andygrove/datafusion"
+    }
+  },
+  {
+    "username": "balloob",
+    "name": "Paulus Schoutsen",
+    "type": "user",
+    "url": "https://github.com/balloob",
+    "avatar": "https://avatars3.githubusercontent.com/u/1444314",
+    "repo": {
+      "name": "pychromecast",
+      "description": "Library for Python 3 to communicate with the Google Chromecast.",
+      "url": "https://github.com/balloob/pychromecast"
+    }
+  },
+  {
+    "username": "iamareebjamal",
+    "name": "Areeb Jamal",
+    "type": "user",
+    "url": "https://github.com/iamareebjamal",
+    "avatar": "https://avatars0.githubusercontent.com/u/3874064",
+    "repo": {
+      "name": "scratch_icon_pack_source",
+      "description": "Here is the source of Apex, Nova, Holo, ADW, Go Launcher blank icon pack template",
+      "url": "https://github.com/iamareebjamal/scratch_icon_pack_source"
+    }
+  },
+  {
+    "username": "inconshreveable",
+    "name": "Alan Shreve",
+    "type": "user",
+    "url": "https://github.com/inconshreveable",
+    "avatar": "https://avatars0.githubusercontent.com/u/836692",
+    "repo": {
+      "name": "ngrok",
+      "description": "Introspected tunnels to localhost",
+      "url": "https://github.com/inconshreveable/ngrok"
+    }
+  },
+  {
+    "username": "palkan",
+    "name": "Vladimir Dementyev",
+    "type": "user",
+    "url": "https://github.com/palkan",
+    "avatar": "https://avatars0.githubusercontent.com/u/1516722",
+    "repo": {
+      "name": "test-prof",
+      "description": "Ruby Tests Profiling Toolbox",
+      "url": "https://github.com/palkan/test-prof"
+    }
+  },
+  {
+    "username": "wcandillon",
+    "name": "William Candillon",
+    "type": "user",
+    "url": "https://github.com/wcandillon",
+    "avatar": "https://avatars1.githubusercontent.com/u/306134",
+    "repo": {
+      "name": "can-it-be-done-in-react-native",
+      "description": "⚛️📺Projects from the “Can it be done in React Native?” YouTube series",
+      "url": "https://github.com/wcandillon/can-it-be-done-in-react-native"
+    }
+  },
+  {
+    "username": "Koenkk",
+    "name": "Koen Kanters",
+    "type": "user",
+    "url": "https://github.com/Koenkk",
+    "avatar": "https://avatars2.githubusercontent.com/u/2892853",
+    "repo": {
+      "name": "zigbee2mqtt",
+      "description": "Zigbee 🐝 to MQTT bridge 🌉, get rid of your proprietary Zigbee bridges 🔨",
+      "url": "https://github.com/Koenkk/zigbee2mqtt"
+    }
+  },
+  {
+    "username": "bahmutov",
+    "name": "Gleb Bahmutov",
+    "type": "user",
+    "url": "https://github.com/bahmutov",
+    "avatar": "https://avatars2.githubusercontent.com/u/2212006",
+    "repo": {
+      "name": "code-snippets",
+      "description": "Chrome DevTools code snippets",
+      "url": "https://github.com/bahmutov/code-snippets"
+    }
+  },
+  {
+    "username": "dagar",
+    "name": "Daniel Agar",
+    "type": "user",
+    "url": "https://github.com/dagar",
+    "avatar": "https://avatars1.githubusercontent.com/u/84712",
+    "repo": {
+      "name": "bluetooth-proximity",
+      "description": "Simple python program to trigger X10 modules based on proximity to your bluetooth enabled cellphone.",
+      "url": "https://github.com/dagar/bluetooth-proximity"
+    }
+  },
+  {
+    "username": "tpope",
+    "name": "Tim Pope",
+    "type": "user",
+    "url": "https://github.com/tpope",
+    "avatar": "https://avatars1.githubusercontent.com/u/378",
+    "repo": {
+      "name": "vim-fugitive",
+      "description": "fugitive.vim: A Git wrapper so awesome, it should be illegal",
+      "url": "https://github.com/tpope/vim-fugitive"
+    }
+  },
+  {
+    "username": "gre",
+    "name": "Gaëtan Renaudeau",
+    "type": "user",
+    "url": "https://github.com/gre",
+    "avatar": "https://avatars2.githubusercontent.com/u/211411",
+    "repo": {
+      "name": "gl-react",
+      "description": "gl-react – React library to write and compose WebGL shaders",
+      "url": "https://github.com/gre/gl-react"
+    }
+  },
+  {
+    "username": "howardjohn",
+    "name": "John Howard",
+    "type": "user",
+    "url": "https://github.com/howardjohn",
+    "avatar": "https://avatars2.githubusercontent.com/u/623453",
+    "repo": {
+      "name": "scala-server-lambda",
+      "description": "Run http4s or akka-http over API Gateway and AWS Lambda",
+      "url": "https://github.com/howardjohn/scala-server-lambda"
+    }
+  },
+  {
+    "username": "takahirox",
+    "name": "Takahiro",
+    "type": "user",
+    "url": "https://github.com/takahirox",
+    "avatar": "https://avatars0.githubusercontent.com/u/7637832",
+    "repo": {
+      "name": "toho-like-js",
+      "description": "Touhou style danmaku shooter game which runs on your chrome.",
+      "url": "https://github.com/takahirox/toho-like-js"
+    }
+  },
+  {
+    "username": "bluejekyll",
+    "name": "Benjamin Fry",
+    "type": "user",
+    "url": "https://github.com/bluejekyll",
+    "avatar": "https://avatars1.githubusercontent.com/u/986845",
+    "repo": {
+      "name": "trust-dns",
+      "description": "A Rust based DNS client, server, and resolver",
+      "url": "https://github.com/bluejekyll/trust-dns"
+    }
+  },
+  {
+    "username": "SimulatedGREG",
+    "name": "Greg Holguin",
+    "type": "user",
+    "url": "https://github.com/SimulatedGREG",
+    "avatar": "https://avatars1.githubusercontent.com/u/8327811",
+    "repo": {
+      "name": "electron-vue",
+      "description": "An Electron & Vue.js quick start boilerplate with vue-cli scaffolding, common Vue plugins, electron-packager/electron-builder, unit/e2e testing, vue-devtools, and webpack.",
+      "url": "https://github.com/SimulatedGREG/electron-vue"
+    }
+  },
+  {
+    "username": "muukii",
+    "name": "Hiroshi Kimura",
+    "type": "user",
+    "url": "https://github.com/muukii",
+    "avatar": "https://avatars1.githubusercontent.com/u/1888355",
+    "repo": {
+      "name": "Pixel",
+      "description": "🎨🖼 An image editor and engine using CoreImage",
+      "url": "https://github.com/muukii/Pixel"
+    }
+  },
+  {
+    "username": "shimat",
+    "name": "shimat",
+    "type": "user",
+    "url": "https://github.com/shimat",
+    "avatar": "https://avatars2.githubusercontent.com/u/4434824",
+    "repo": {
+      "name": "opencvsharp",
+      "description": ".NET Framework wrapper for OpenCV",
+      "url": "https://github.com/shimat/opencvsharp"
+    }
+  },
+  {
+    "username": "medikoo",
+    "name": "Mariusz Nowak",
+    "type": "user",
+    "url": "https://github.com/medikoo",
+    "avatar": "https://avatars3.githubusercontent.com/u/122434",
+    "repo": {
+      "name": "memoizee",
+      "description": "Complete memoize/cache solution for JavaScript",
+      "url": "https://github.com/medikoo/memoizee"
+    }
+  },
+  {
+    "username": "dunglas",
+    "name": "Kévin Dunglas",
+    "type": "user",
+    "url": "https://github.com/dunglas",
+    "avatar": "https://avatars2.githubusercontent.com/u/57224",
+    "repo": {
+      "name": "vulcain",
+      "description": "Use HTTP/2 Server Push to create fast and idiomatic client-driven REST APIs",
+      "url": "https://github.com/dunglas/vulcain"
+    }
+  },
+  {
+    "username": "huan",
+    "name": "Huan (李卓桓)",
+    "type": "user",
+    "url": "https://github.com/huan",
+    "avatar": "https://avatars0.githubusercontent.com/u/1361891",
+    "repo": {
+      "name": "node-facenet",
+      "description": "Solve face verification, recognition and clustering problems: A TensorFlow backed FaceNet implementation for Node.js.",
+      "url": "https://github.com/huan/node-facenet"
+    }
+  },
+  {
+    "username": "miekg",
+    "name": "Miek Gieben",
+    "type": "user",
+    "url": "https://github.com/miekg",
+    "avatar": "https://avatars2.githubusercontent.com/u/353371",
+    "repo": {
+      "name": "dns",
+      "description": "DNS library in Go",
+      "url": "https://github.com/miekg/dns"
+    }
+  },
+  {
+    "username": "jeremyrsmith",
+    "name": "jeremyrsmith",
+    "type": "user",
+    "url": "https://github.com/jeremyrsmith",
+    "avatar": "https://avatars1.githubusercontent.com/u/864869",
+    "repo": {
+      "name": "patchless",
+      "description": "Patch data type for Scala and shapeless",
+      "url": "https://github.com/jeremyrsmith/patchless"
+    }
+  },
+  {
+    "username": "mattn",
+    "name": "mattn",
+    "type": "user",
+    "url": "https://github.com/mattn",
+    "avatar": "https://avatars0.githubusercontent.com/u/10111",
+    "repo": {
+      "name": "emmet-vim\n    http://emmet.io/",
+      "description": "emmet for vim: http://emmet.io/",
+      "url": "https://github.com/mattn/emmet-vim"
+    }
+  }
+]

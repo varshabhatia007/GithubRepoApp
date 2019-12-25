@@ -49,8 +49,20 @@ dependencies {
     implementation deps.network.gson
     implementation deps.network.okhttp_logging_interceptor
 
-    //testing
+    // Android Testing Support Library's runner and rules
+    testImplementation deps.arch_core.testing
     testImplementation deps.junit
+    testImplementation deps.mock_web_server
+    testImplementation deps.network.mock
+    testImplementation deps.mockito.core
+
+    androidTestImplementation deps.test.core
     androidTestImplementation deps.test.runner
-    androidTestImplementation deps.espresso.core
+    androidTestImplementation deps.test.rules
+
+    androidTestImplementation deps.junit
+    androidTestImplementation deps.network.mock
+    androidTestImplementation deps.mockito.core
+    androidTestImplementation deps.mockito.android
+    androidTestImplementation deps.arch_core.testing
 }
