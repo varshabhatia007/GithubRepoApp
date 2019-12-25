@@ -6,11 +6,11 @@ import retrofit2.http.GET
 interface GithubApi {
 
     companion object {
-        const val BASE_URL = "https://github-trending-api.now.sh/developer"
+        const val BASE_URL = "https://github-trending-api.now.sh/"
     }
 
 
-    @GET("repositories")
+    @GET("developer")
     suspend fun getTrendingRepos() : Response<List<TrendingRepo>>
 
 }

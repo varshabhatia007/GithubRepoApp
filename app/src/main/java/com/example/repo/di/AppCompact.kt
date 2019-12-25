@@ -2,6 +2,7 @@ package com.example.repo.di
 
 import android.app.Application
 import com.example.repo.GithubRepoApp
+import com.example.repo.di.module.ActivityModule
 import com.example.repo.di.module.AppModule
 import dagger.BindsInstance
 import dagger.Component
@@ -12,7 +13,8 @@ import javax.inject.Singleton
 @Component(
     modules = [
         AndroidSupportInjectionModule::class,
-        AppModule::class]
+        AppModule::class,
+        ActivityModule::class]
 )
 interface AppComponent {
 
