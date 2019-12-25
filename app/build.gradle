@@ -40,6 +40,15 @@ dependencies {
     kapt deps.dagger.android_support_compiler
     kapt deps.dagger.compiler
 
+    //coroutines
+    implementation deps.coroutines.android
+    implementation deps.coroutines.core
+
+    //network
+    implementation deps.network.retrofit
+    implementation deps.network.gson
+    implementation deps.network.okhttp_logging_interceptor
+
     //testing
     testImplementation deps.junit
     androidTestImplementation deps.test.runner
