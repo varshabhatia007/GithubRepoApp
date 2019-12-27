@@ -54,6 +54,11 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
         updateRepoList()
 
         getTrendingRepo()
+
+        srlList.setOnRefreshListener {
+            srlList.isRefreshing = true
+            getTrendingRepo(true)
+        }
     }
 
     private fun getTrendingRepo(forceFetch: Boolean = false) {
@@ -122,12 +127,14 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
 
     private fun showUI(status: Resource.Status) {
         layoutError.visibility = if(status == Resource.Status.ERROR) View.VISIBLE else View.GONE
-        rvList.visibility = if(status == Resource.Status.SUCCESS) View.VISIBLE else View.GONE
+        srlList.visibility = if(status == Resource.Status.SUCCESS) View.VISIBLE else View.GONE
         loadingView.visibility = if(status == Resource.Status.LOADING) View.VISIBLE else View.GONE
         if(status == Resource.Status.LOADING)
             loadingView.startShimmerAnimation()
-        else
+        else {
             loadingView.stopShimmerAnimation()
+            srlList.isRefreshing = false
+        }
     }
 
 

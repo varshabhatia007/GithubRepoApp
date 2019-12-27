@@ -32,14 +32,20 @@
 
     </com.facebook.shimmer.ShimmerFrameLayout>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rvList"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:itemCount="12"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        tools:listitem="@layout/rv_repo_item" />
+        android:id="@+id/srlList">
 
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:itemCount="12"
+            tools:listitem="@layout/rv_repo_item" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <include
         android:id="@+id/layoutError"
