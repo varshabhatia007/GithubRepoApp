@@ -8,4 +8,48 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="WrapStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextBold" parent="WrapStyle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/textsize_large</item>
+    </style>
+
+    <style name="TextHeading" parent="WrapStyle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+    </style>
+
+    <style name="TextSubHeading" parent="WrapStyle">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">@dimen/textsize_medium</item>
+    </style>
+
+    <style name="TextDescription" parent="WrapStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/textsize_medium</item>
+    </style>
+
+
+    <style name="TextTitle" parent="WrapStyle">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:textSize">@dimen/textsize_xlarge</item>
+        <item name="android:textColor">@color/color_text_title</item>
+    </style>
+
+
+    <style name="TextDetails">
+        <item name="android:fontFamily">@font/pingfang_sc_regular</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+    </style>
+
+    <style name="TextSmall" parent="WrapStyle">
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">@dimen/textsize_small</item>
+    </style>
+
+
 </resources>

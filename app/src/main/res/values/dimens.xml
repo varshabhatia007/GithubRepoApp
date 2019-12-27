@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacing_xxlarge">32dp</dimen>
+    <dimen name="spacing_xlarge">24dp</dimen>
+    <dimen name="spacing_large">21dp</dimen>
+    <dimen name="spacing_medium">16dp</dimen>
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_xsmall">6dp</dimen>
+    <dimen name="spacing_xxsmall">4dp</dimen>
+
+
+    <dimen name="size_small">24dp</dimen>
+    <dimen name="size_medium">32dp</dimen>
+    <dimen name="size_xlarge">64dp</dimen>
+    <dimen name="size_xxlarge">80dp</dimen>
+
+    <dimen name="textsize_small">12sp</dimen>
+    <dimen name="textsize_medium">15sp</dimen>
+    <dimen name="textsize_large">18sp</dimen>
+    <dimen name="textsize_xlarge">21sp</dimen>
+
+    <dimen name="view_xxsmall">1dp</dimen>
+    <dimen name="view_small">48dp</dimen>
+    <dimen name="view_large">100dp</dimen>
+    <dimen name="view_medium">56dp</dimen>
+    <dimen name="view_xlarge">260dp</dimen>
+    <dimen name="view_xxlarge">328dp</dimen>
+</resources>
