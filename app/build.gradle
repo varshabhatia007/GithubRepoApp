@@ -58,6 +58,12 @@ dependencies {
     implementation deps.glide.core
     kapt deps.glide.compiler
 
+    //room
+    implementation deps.room.runtime
+    implementation deps.room.ktx
+    kapt deps.room.compiler
+
+
     // Android Testing Support Library's runner and rules
     testImplementation deps.arch_core.testing
     testImplementation deps.junit

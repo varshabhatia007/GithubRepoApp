@@ -23,6 +23,8 @@ versions.support = "1.0.0"
 versions.dagger = "2.16"
 versions.glide = "4.9.0"
 
+versions.room = "2.2.0-alpha01"
+
 versions.mockito = "2.25.0"
 versions.mockito_all = "1.10.19"
 versions.mockito_android = "2.25.0"
@@ -124,6 +126,13 @@ def glide = [:]
 glide.core = "com.github.bumptech.glide:glide:${versions.glide}"
 glide.compiler = "com.github.bumptech.glide:compiler:${versions.glide}"
 deps.glide = glide
+
+def room = [:]
+room.runtime = "androidx.room:room-runtime:$versions.room"
+room.compiler = "androidx.room:room-compiler:$versions.room"
+room.testing = "androidx.room:room-testing:$versions.room"
+room.ktx = "androidx.room:room-ktx:${versions.room}"
+deps.room = room
 
 ext.deps = deps
 

@@ -11,7 +11,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 
-@Module(includes = [NetworkModule::class ,VMModule::class])
+@Module(includes = [NetworkModule::class ,VMModule::class, DBModule::class])
 class AppModule {
     @Singleton
     @Provides

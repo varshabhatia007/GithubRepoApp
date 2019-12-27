@@ -4,13 +4,13 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.repo.R
 import com.example.repo.extensions.injectViewModel
 import com.example.repo.githubapi.Resource
 import com.example.repo.githubapi.TrendingRepo
-import dagger.android.AndroidInjector
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import kotlinx.android.synthetic.main.activity_main.*
@@ -49,8 +49,12 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
 
         mainVM = injectViewModel(viewModelFactory)
 
-        coroutineScope.launch {
-            val result = mainVM.getTrendingRepos()
+        getTrendingRepo()
+    }
+
+    private fun getTrendingRepo() {
+        mainVM.trendingRepos.observe(this, Observer {
+                result ->
             when(result.status) {
                 Resource.Status.SUCCESS -> {
                     Log.e(TAG,"success  ${result.data}  ")
@@ -63,15 +67,13 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
                         }
                     }
 
-
-
                 }
                 Resource.Status.ERROR ,
                 Resource.Status.LOADING ->  {
                     Log.e(TAG," ${result.message}  ")
                 }
             }
-        }
+        })
     }
 
     private fun updateRepoList() {
