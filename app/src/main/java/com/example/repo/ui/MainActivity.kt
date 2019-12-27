@@ -63,8 +63,9 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
                 Resource.Status.SUCCESS -> {
                     Log.e(TAG,"success  ${result.data?.size}  ")
 
-                    CoroutineScope(Dispatchers.Main).launch {
-                        result.data?.let {
+
+                    result.data?.let {
+                        if (it.isNotEmpty()) {
                             showUI(result.status)
                             trendingRepos.clear()
                             trendingRepos.addAll(it)
@@ -84,6 +85,7 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
                 }
                 Resource.Status.LOADING ->  {
                     Log.e(TAG,"loading ${result.message}  ")
+                    showUI(result.status)
                 }
             }
         })
@@ -106,18 +108,28 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
                         repoAdapter.notifyItemChanged(selectedItem)
                     }
                     repoAdapter.notifyItemChanged(oldPosition)
+
+
+
                 }
             }
         )
 
-        rvList.layoutManager = LinearLayoutManager(this)
         rvList.adapter = repoAdapter
         repoAdapter.notifyDataSetChanged()
     }
 
+
     private fun showUI(status: Resource.Status) {
         layoutError.visibility = if(status == Resource.Status.ERROR) View.VISIBLE else View.GONE
         rvList.visibility = if(status == Resource.Status.SUCCESS) View.VISIBLE else View.GONE
+        loadingView.visibility = if(status == Resource.Status.LOADING) View.VISIBLE else View.GONE
+        if(status == Resource.Status.LOADING)
+            loadingView.startShimmerAnimation()
+        else
+            loadingView.stopShimmerAnimation()
     }
+
+
 
 }

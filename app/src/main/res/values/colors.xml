@@ -10,4 +10,5 @@
     <color name="color_text_heading">#4a4a4a</color>
     <color name="color_text_desc">#929292</color>
     <color name="color_button_text">#31b057</color>
+    <color name="color_dummy_view">#EBEBEB</color>
 </resources>

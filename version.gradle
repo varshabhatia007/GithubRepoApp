@@ -25,6 +25,8 @@ versions.glide = "4.9.0"
 
 versions.room = "2.2.0-alpha01"
 
+versions.shimmer = "0.1.0@aar"
+
 versions.mockito = "2.25.0"
 versions.mockito_all = "1.10.19"
 versions.mockito_android = "2.25.0"
@@ -133,6 +135,8 @@ room.compiler = "androidx.room:room-compiler:$versions.room"
 room.testing = "androidx.room:room-testing:$versions.room"
 room.ktx = "androidx.room:room-ktx:${versions.room}"
 deps.room = room
+
+deps.shimmer = "com.facebook.shimmer:shimmer:${versions.shimmer}"
 
 ext.deps = deps
 

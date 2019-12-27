@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="@dimen/size_xxlarge">
+
+    <View
+        android:layout_width="@dimen/size_medium"
+        android:layout_height="@dimen/size_medium"
+        android:background="@drawable/avatar_view"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:id="@+id/vAvatar"
+        />
+
+    <View
+        android:layout_width="@dimen/view_large"
+        android:layout_height="@dimen/spacing_small"
+        android:layout_toEndOf="@id/vAvatar"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:background="@drawable/rounded_dummy_view"
+        android:id="@+id/vDummyName"/>
+
+    <View
+        android:layout_width="@dimen/view_xlarge"
+        android:layout_height="@dimen/spacing_small"
+        android:layout_toEndOf="@id/vAvatar"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:layout_marginStart="@dimen/spacing_medium"
+        android:background="@drawable/rounded_dummy_view"
+        android:layout_below="@id/vDummyName"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_xxsmall"
+        android:background="@color/color_border"
+        android:layout_alignParentBottom="true"
+        />
+
+</RelativeLayout>
