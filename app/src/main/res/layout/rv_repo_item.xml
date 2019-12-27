@@ -20,7 +20,7 @@
 
     <TextView
         android:id="@+id/userName"
-        style="@style/TextHeading"
+        style="@style/TextAppearance.AppCompat.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_medium"
@@ -29,8 +29,8 @@
         tools:text="Franck Nijhof" />
 
     <TextView
-        android:id="@+id/repoName"
-        style="@style/TextHeading"
+        android:id="@+id/userUrl"
+        style="@style/TextAppearance.AppCompat.Subhead"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_medium"
@@ -39,12 +39,64 @@
         app:layout_constraintTop_toBottomOf="@id/userName"
         tools:text="Repo Name" />
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detailLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="@dimen/spacing_large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userUrl">
+
+        <TextView
+            android:id="@+id/repoLabel"
+            style="@style/TextAppearance.AppCompat.Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REPO DETAILS"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/repoName"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repoLabel"
+            tools:text="repoName" />
+
+        <TextView
+            android:id="@+id/repoDesc"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repoName"
+            tools:text="A curated list of amazingly awesome Home Assistant resources." />
+
+        <TextView
+            android:id="@+id/repoUrl"
+            style="@style/TextAppearance.AppCompat.Subhead"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_xxsmall"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/repoDesc"
+            tools:text="https://github.com/frenck/awesome-home-assistant" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <View
+        android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="@dimen/spacing_medium"
         android:background="@color/color_border"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/repoName" />
+        app:layout_constraintTop_toBottomOf="@id/detailLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
