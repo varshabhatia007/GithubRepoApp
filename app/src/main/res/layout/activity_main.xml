@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:itemCount="12"
+        tools:listitem="@layout/rv_repo_item" />
+
+
+    <include
+        android:id="@+id/layoutError"
+        layout="@layout/layout_loading_error"
+        android:visibility="gone" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

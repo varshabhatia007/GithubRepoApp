@@ -10,7 +10,7 @@ interface GithubApi {
     }
 
 
-    @GET("developer")
+    @GET("developers")
     suspend fun getTrendingRepos() : Response<List<TrendingRepo>>
 
 }

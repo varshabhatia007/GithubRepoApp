@@ -54,6 +54,10 @@ dependencies {
     implementation deps.lifecycle.livedata
     implementation deps.lifecycle.viewmodel
 
+    //glide
+    implementation deps.glide.core
+    kapt deps.glide.compiler
+
     // Android Testing Support Library's runner and rules
     testImplementation deps.arch_core.testing
     testImplementation deps.junit
