@@ -5,5 +5,5 @@ import com.example.repo.githubapi.GithubApi
 import javax.inject.Inject
 
 class GitHubRepoDataSource @Inject constructor(val githubApi: GithubApi) : DataSource() {
-    suspend fun getTrendingRepo() = getResult { githubApi.getTrendingRepos() }
+    suspend fun getTrendingRepo(sortByData: String) = getResult { githubApi.getTrendingRepos(sortByData) }
 }

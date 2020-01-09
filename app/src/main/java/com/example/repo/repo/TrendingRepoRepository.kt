@@ -13,9 +13,9 @@ class TrendingRepoRepository @Inject constructor(private val repoDao: RepoDao,
     /** time to leave is set to 2 hours  as per requirement*/
     private val ttl = 2 * 60 * 60 * 1000
 
-    fun getTrendingRepo(forceFetch: Boolean = false) = resultLiveData(
+    fun getTrendingRepo(forceFetch: Boolean = false, sortByData: String) = resultLiveData(
         databaseQuery = { repoDao.getTrendingRepo() },
-        networkCall = { gitHubRepoDataSource.getTrendingRepo() },
+        networkCall = { gitHubRepoDataSource.getTrendingRepo(sortByData) },
         saveCallResult = { repoDao.insertAll(it) },
         shouldFetch = {
             /**

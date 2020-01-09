@@ -45,7 +45,7 @@ class GithubApiTest {
     fun getTrendingRepos() {
         runBlocking {
             enqueueResponse("trending-repo-response.json")
-            val resultResponse = service.getTrendingRepos().body()
+            val resultResponse = service.getTrendingRepos(sortByData).body()
 
             /*check request type and it's end point*/
             val request = mockWebServer.takeRequest()

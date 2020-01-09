@@ -6,4 +6,7 @@
     <string name="trending">Trending</string>
     <string name="sort_by_name">Sort by name</string>
     <string name="sort_by_stars">Sort by stars</string>
+    <string name="sort_by_daily_data">Sort By Daily</string>
+    <string name="sort_by_weekly_data">Sort By Weekly</string>
+    <string name="sort_by_monthly_data">Sort By Monthly</string>
 </resources>

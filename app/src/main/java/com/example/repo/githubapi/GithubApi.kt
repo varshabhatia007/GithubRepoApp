@@ -2,6 +2,7 @@ package com.example.repo.githubapi
 
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Query
 
 interface GithubApi {
 
@@ -11,6 +12,6 @@ interface GithubApi {
 
 
     @GET("developers")
-    suspend fun getTrendingRepos() : Response<List<TrendingRepo>>
+    suspend fun getTrendingRepos(@Query("since") since:String =""): Response<List<TrendingRepo>>
 
 }
