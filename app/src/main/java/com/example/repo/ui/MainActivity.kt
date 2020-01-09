@@ -1,7 +1,10 @@
 package com.example.repo.ui
 
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
@@ -16,6 +19,7 @@ import dagger.android.DispatchingAndroidInjector
 import dagger.android.support.HasSupportFragmentInjector
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.layout_loading_error.*
+import kotlinx.android.synthetic.main.layout_toolbar.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -45,11 +49,15 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
 
     private var selectedItem = -1
 
+    private lateinit var subMenu: SubMenu
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         mainVM = injectViewModel(viewModelFactory)
+
+        showMenuItem()
 
         updateRepoList()
 
@@ -59,6 +67,29 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
             srlList.isRefreshing = true
             getTrendingRepo(true)
         }
+
+        ivMore.setOnClickListener {
+
+            if(subMenu.isShowing)
+                subMenu.dismiss()
+            else
+                subMenu.showAtLocation(it, Gravity.TOP or Gravity.END,ivMore.width,ivMore.bottom + statusBarHeight)
+        }
+    }
+
+
+
+    private fun showMenuItem() {
+        subMenu = SubMenu(this,
+            (getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater).inflate(R.layout.layout_menu,null)){
+            sortByNames()
+            subMenu.dismiss()
+        }
+    }
+
+    private fun sortByNames() {
+        trendingRepos.sortBy { it.name }
+        repoAdapter.notifyDataSetChanged()
     }
 
     private fun getTrendingRepo(forceFetch: Boolean = false) {
@@ -137,6 +168,13 @@ class MainActivity : AppCompatActivity() , HasSupportFragmentInjector {
         }
     }
 
-
+    private val statusBarHeight by lazy{
+        var result = 0
+        val resourceId = resources.getIdentifier("status_bar_height", "dimen", "android")
+        if (resourceId > 0) {
+            result = resources.getDimensionPixelSize(resourceId)
+        }
+        result
+    }
 
 }
