@@ -45,11 +45,11 @@ class GithubApiTest {
     fun getTrendingRepos() {
         runBlocking {
             enqueueResponse("trending-repo-response.json")
-            val resultResponse = service.getTrendingRepos(sortByData).body()
+            val resultResponse = service.getTrendingRepos("daily").body()
 
             /*check request type and it's end point*/
             val request = mockWebServer.takeRequest()
-            assertThat(request.path, `is`("/repositories"))
+            assertThat(request.path, `is`("/developers?since=daily"))
 
             /* assert response */
             assertNotNull(resultResponse)
