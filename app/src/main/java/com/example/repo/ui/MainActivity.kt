@@ -106,7 +106,7 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                     if (trendingRepos.isEmpty()) {
                         showUI(result.status)
                         btnRetry.setOnClickListener {
-                            getTrendingRepo(true)
+                            getTrendingRepo(true, sortByData)
                         }
                     }
                 }

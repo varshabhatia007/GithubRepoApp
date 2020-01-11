@@ -29,7 +29,7 @@ fun <T, A> resultLiveData(databaseQuery: () -> LiveData<T>,
             val responseStatus = networkCall()
             if (responseStatus.status == Resource.Status.SUCCESS) {
                 saveCallResult(responseStatus.data!!)
-            } else if (responseStatus.status == Resource.Status.ERROR) {
+            } else if (responseStatus.status == Resource.Status.ERROR && dbValue == null) {
                 emit(Resource.error<T>(responseStatus.message!!))
             }
         }
