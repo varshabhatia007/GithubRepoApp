@@ -21,3 +21,8 @@ In success state​, list of trending repos along with option to sort the list i
 
 
 Every response object from network call is added with current timestamp, so that next time when it is fetched from room db, we can check if it is older than 2 hours and if we need to fetch from remote again.
+
+Handle the offline data based on sortby option.
+If user is offline by default it shows DAILY data, and user can choose the data from option menu.
+If user select the data which is sort by monthly option, app display the offline data for MONTHLY use 
+and same for WEEKLY user as well. 
