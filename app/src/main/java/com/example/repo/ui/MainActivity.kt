@@ -74,12 +74,10 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
             }
             R.id.sortByWeekly -> {
                 getTrendingRepo(true, "weekly")
-                repoAdapter.notifyDataSetChanged()
                 return true
             }
             R.id.sortByMonthly -> {
                 getTrendingRepo(true, "monthly")
-                repoAdapter.notifyDataSetChanged()
                 return true
             }
             else -> super.onOptionsItemSelected(item)
@@ -98,13 +96,13 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                             showUI(result.status)
                             trendingRepos.clear()
                             trendingRepos.addAll(it)
-                            repoAdapter.notifyDataSetChanged()
+
+                            repoAdapter.updateItems(trendingRepos)
                         }
                     }
 
                 }
                 Resource.Status.ERROR -> {
-                    Log.e(TAG, "error  ${result.message}  ")
                     if (trendingRepos.isEmpty()) {
                         showUI(result.status)
                         btnRetry.setOnClickListener {

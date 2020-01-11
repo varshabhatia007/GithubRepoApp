@@ -28,7 +28,8 @@ data class TrendingRepo(
     @TypeConverters(RepoTypeConverter::class)
     @SerializedName("repo")
     var repo: Repo,
-    var timeStamp: Long = System.currentTimeMillis()
+    var timeStamp: Long = System.currentTimeMillis(),
+    var sortByData: String
 ) : Parcelable
 
 @Parcelize

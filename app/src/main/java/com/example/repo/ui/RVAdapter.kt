@@ -30,5 +30,10 @@ open class RVAdapter<M,H : RecyclerView.ViewHolder> (private val context: Contex
         binder(holder,item,position)
     }
 
+    fun updateItems(items : MutableList<M>) {
+        this.items = items
+        notifyDataSetChanged()
+    }
+
 
 }

@@ -5,7 +5,6 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface GithubApi {
-
     companion object {
         const val BASE_URL = "https://github-trending-api.now.sh/"
     }

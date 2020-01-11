@@ -10,8 +10,8 @@ import com.example.repo.githubapi.TrendingRepo
 @Dao
 interface RepoDao {
 
-    @Query("SELECT * FROM repos ")
-    fun getTrendingRepo(): LiveData<List<TrendingRepo>>
+    @Query("SELECT * FROM repos where sortByData = :sortByData")
+    fun getTrendingRepo(sortByData: String): LiveData<List<TrendingRepo>>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(trendingRepos: List<TrendingRepo>)
