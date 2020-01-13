@@ -35,5 +35,10 @@ open class RVAdapter<M,H : RecyclerView.ViewHolder> (private val context: Contex
         notifyDataSetChanged()
     }
 
+    fun setSearchResult(items: MutableList<M>){
+        this.items = items
+        notifyDataSetChanged()
+    }
+
 
 }

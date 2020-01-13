@@ -1,10 +1,13 @@
 package com.example.repo.ui
 
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
-import android.view.*
+import android.view.Menu
+import android.view.MenuItem
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.SearchView
+import androidx.core.view.MenuItemCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -19,7 +22,8 @@ import kotlinx.android.synthetic.main.layout_loading_error.*
 import kotlinx.coroutines.CoroutineScope
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
+class MainActivity : AppCompatActivity(), HasSupportFragmentInjector,
+    SearchView.OnQueryTextListener {
 
     companion object {
         val TAG = "MainActivity"
@@ -80,8 +84,30 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
                 getTrendingRepo(true, "monthly")
                 return true
             }
+
+            R.id.search -> {
+                val searchView = MenuItemCompat.getActionView(item) as SearchView
+                searchView.setOnQueryTextListener(this)
+                getListener(item)
+
+                return true
+            }
+
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    private fun getListener(items: MenuItem) {
+        items.setOnActionExpandListener(object : MenuItem.OnActionExpandListener {
+            override fun onMenuItemActionExpand(item: MenuItem?): Boolean {
+                return true
+            }
+
+            override fun onMenuItemActionCollapse(item: MenuItem?): Boolean {
+                repoAdapter.updateItems(trendingRepos)
+                return true
+            }
+        })
     }
 
     private fun getTrendingRepo(forceFetch: Boolean = false, sortByData: String = "daily") {
@@ -119,8 +145,12 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
     }
 
     private fun updateRepoList() {
-        repoAdapter = RVAdapter(this, R.layout.rv_repo_item, { RepoVH(it) }, trendingRepos,
-            { holder, repo, position ->
+        repoAdapter = RVAdapter(
+            context = this,
+            layoutId = R.layout.rv_repo_item,
+            holderMaker = { RepoVH(it) },
+            mutableList = trendingRepos,
+            binder = { holder, repo, position ->
                 holder.bind(repo, selectedItem) {
                     val oldPosition = selectedItem
 
@@ -150,6 +180,36 @@ class MainActivity : AppCompatActivity(), HasSupportFragmentInjector {
             loadingView.stopShimmerAnimation()
             srlList.isRefreshing = false
         }
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        return false
+    }
+
+    override fun onQueryTextChange(newText: String?): Boolean {
+
+        val filteredModelList: MutableList<TrendingRepo> = filter(
+            trendingRepos.toMutableList(),
+            newText.toString()
+        )
+        repoAdapter.setSearchResult(filteredModelList)
+        return true
+    }
+
+    private fun filter(
+        models: List<TrendingRepo>,
+        query: String
+    ): MutableList<TrendingRepo> {
+        var query = query
+        query = query.toLowerCase()
+        val filteredModelList: MutableList<TrendingRepo> = java.util.ArrayList<TrendingRepo>()
+        for (model in models) {
+            val text: String = model.name!!.toLowerCase()
+            if (text.contains(query)) {
+                filteredModelList.add(model)
+            }
+        }
+        return filteredModelList
     }
 
 }

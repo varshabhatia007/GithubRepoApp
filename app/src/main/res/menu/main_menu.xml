@@ -14,4 +14,10 @@
         android:id="@+id/sortByMonthly"
         android:title="@string/sort_by_monthly_data"
         app:showAsAction="never" />
+
+    <item android:id="@+id/search"
+        android:title="Search"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
 </menu>
